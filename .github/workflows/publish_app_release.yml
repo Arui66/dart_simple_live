@@ -3,7 +3,7 @@ name: app-build-action
 on:
   push:
     tags:
-      - "v*"
+      - "V*"
 jobs:
   build-mac-ios-android:
     runs-on: macos-latest
@@ -15,7 +15,7 @@ jobs:
         with:
           ref: master
 
-      #APK签名设置1
+      #APK签名设置
       - name: Download Android keystore
         id: android_keystore
         uses: timheuer/base64-to-file@v1.2
